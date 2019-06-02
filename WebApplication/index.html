@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<head>
+
+
+  <script src="shared/jquery.js" type="text/javascript"></script>
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <script src="Number_count.js" type="text/javascript"></script>
+  <script src="animated_bar.js" type="text/javascript"></script>
+   <link rel="stylesheet" type="text/css" href="shared/shiny.css"/> 
+ <link rel="stylesheet" type="text/css" href="plot.css"/> 
+ 
+
+</head>
+
+<body >
+ 
+  <p style="text-align:center;font-weight:bold;font-size:30px;">SALARY PREDICTION</p>
+
+  <hr/>
+
+
+  <table id="myDIV">
+    <tr><td style="color:#ee7600;font-weight:bold;font-size:30px;">Plots:</td></tr>
+        <tr>
+            <td>
+                <p style="color:#0000cd;">REPORTED SALARY(1 unit=1 k) VS BUREAU</p>
+        
+                  <canvas id="histogram" width="800" height="400" style="background-color:lightGray;">
+                    Get a newer browser!
+                  </canvas><br><br>
+                  
+            </td>
+            <td style="color:#0000cd;">EMPLOYEMENT PER BUREAU
+            <div id="plot" class="shiny-plot-output"
+       style="width:510px; height: 430px"></div>
+            </td>
+        </tr>
+  </table>
+  <button onClick="init()">PLOT GRAPH</button>
+<hr/>
+ <table>
+    <tr><td style="text-align:center;color:#ee7600;font-weight:bold;font-size:30px;">SALARY PREDICTION
+                </td></tr>
+  <tr>
+  <td>
+  <label style="color:#0000cd;font-weight:bold;font-size:20px;" >Year:  </label>   </td>
+  <td><input style="height:25px;" type="Number" name="year" value="2019" min="2016" max="2029" />
+  </td>
+  </tr>
+  <tr>
+      <td>  <label style="color:#0000cd;font-weight:bold;font-size:20px;">Quarter: </label>  </td>
+      
+  <td> <input style="height:25px;" type="Number" name="quarter" value="3" min="1" max="4"/></td>
+  
+  <td style="color:#0000cd;font-weight:bold;font-size:25px;">Predicted Salary(in $):</td>
+  <td style="color:green;font-weight:bold;font-size:25px;" id="summary" class="shiny-text-output">
+  </td>
+  
+  </tr>
+  
+<tr>
+<td><label style="color:#0000cd;font-weight:bold;font-size:20px;">Job Title:</label></td>
+<td><input type="text" style="height:25px;" id="second"/>
+  
+</td>
+
+</tr>
+  
+  </table>
+  <hr/>
+    <table>
+          <tr>
+             
+                <td>
+                  <table>
+                    <tr> 
+                <td colspan="2" style="color:#ee7600;font-weight:bold;font-size:30px;">SALARY SUMMARY
+                </td></tr>
+                <tr>
+   <td>
+  
+  </td>
+<td>
+  <table>
+    <tr>
+  <td colspan="1" style="color:#0000cd;font-weight:bold;font-size:20px;" >Job Title:
+  </td>
+  <td>
+  <input style="height:25px;" type="text" name="tittle" value="correctional officer"/>
+  </td>
+  </tr>
+<tr>
+<td colspan="1" style="color:#0000cd;font-weight:bold;font-size:20px;" >Current Salary</td>
+<td>
+  <div class="arrow"  >
+
+<p id="abc" class="triangle shiny-text-output" style="font-weight:bold;"> 
+</p>
+
+ <div class="line"></div>
+   <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+
+  <div class="point"></div>
+
+  </div>
+<p class="text">| 25%   50%   75% <p id="q13" class="text2 shiny-text-output"></p>
+  
+  </td>
+  <tr>
+    <td colspan="1" style="color:#0000cd;font-weight:bold;font-size:20px;" >Plot </td>
+
+    <td>
+      <div id="lplot" class="shiny-plot-output" style="width:460px; height: 400px; margin-top:35px"></div>
+    </td>
+  </tr>
+  </table>
+  
+</td>
+
+  </tr>
+                </table>
+                </td>
+                
+                
+        </tr>
+  
+</table>
+
+                 
+                
+</body>
+</html>
